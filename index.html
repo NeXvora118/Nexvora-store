@@ -1,65 +1,60 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeXvora Premium Fashion</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <div class="top">NeXvora Premium Fashion • Trusted Quality</div>
-  <nav>
-    <div class="logo">Ne<span>X</span>vora</div>
-    <div class="navlinks">
-      <a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a>
-      <button class="cart-btn" onclick="openCart()">🛒 Cart <b id="cartCount">0</b></button>
+<!-- Premium Panjabi Collection Section -->
+<section id="products" class="product-section">
+  <h2 class="section-title">Exclusive Panjabi Collection</h2>
+  <p class="section-subtitle">প্রিমিয়াম ফেব্রিক ও আকর্ষণীয় জ্যামিতিক প্রিন্ট ডিজাইনের প্রিমিয়াম পাঞ্জাবি। আভিজাত্য ও আরামের অনন্য সংমিশ্রণ।</p>
+
+  <div class="product-grid">
+    
+    <!-- Product 1: Navy Blue -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="panjabi-navy.jpg" alt="Royal Navy Blue Printed Panjabi">
+        <span class="discount-badge">১০% ছাড়</span>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Royal Navy Blue Printed Panjabi</h3>
+        <p class="product-desc">আকর্ষণীয় ডার্ক নেভি ব্লু শেড, সুক্ষ্ম অল-ওভার জ্যামিতিক নকশা এবং প্রিমিয়াম মেটালিক বোতাম যুক্ত রাজকীয় ডিজাইনের পাঞ্জাবি।</p>
+        <div class="price-box">
+          <span class="current-price">৳৮৯৯</span>
+          <span class="original-price"><del>৳৯৯৯</del></span>
+        </div>
+        <button class="cart-btn" onclick="addToCart('Royal Navy Blue Panjabi', 899)">অর্ডার করুন</button>
+      </div>
     </div>
-  </nav>
-</header>
 
-<section id="home" class="hero">
-  <div>
-    <p class="eyebrow">NEW ARRIVAL</p>
-    <h1>Premium Fashion,<br><span>Made for You.</span></h1>
-    <p>Premium fabric • Elegant design • Comfortable fit</p>
-    <a href="#products" class="cta">SHOP NOW →</a>
+    <!-- Product 2: Deep Maroon -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="panjabi-maroon.jpg" alt="Deep Maroon Geo-Pattern Panjabi">
+        <span class="discount-badge">১০% ছাড়</span>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Deep Maroon Geo-Pattern Panjabi</h3>
+        <p class="product-desc">গৌরবময় ডিপ মেরুন কালারের ক্লাসিকাল প্যাটেন্ট ডিজাইন। যেকোনো উৎসব বা বিশেষ আয়োজনে পরিধানের জন্য পারফেক্ট।</p>
+        <div class="price-box">
+          <span class="current-price">৳৮৯৯</span>
+          <span class="original-price"><del>৳৯৯৯</del></span>
+        </div>
+        <button class="cart-btn" onclick="addToCart('Deep Maroon Panjabi', 899)">অর্ডার করুন</button>
+      </div>
+    </div>
+
+    <!-- Product 3: Olive Brown / Khaki -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="panjabi-brown.jpg" alt="Classic Olive Geometric Panjabi">
+        <span class="discount-badge">১০% ছাড়</span>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Classic Olive Geometric Panjabi</h3>
+        <p class="product-desc">অনন্য অলিভ-ব্রাউন টোন ও জ্যামিতিক প্রিন্টের গর্জিয়াস আউটলুক। সর্বোচ্চ আরামদায়ক ফেব্রিক দিয়ে তৈরি।</p>
+        <div class="price-box">
+          <span class="current-price">৳৮৯৯</span>
+          <span class="original-price"><del>৳৯৯৯</del></span>
+        </div>
+        <button class="cart-btn" onclick="addToCart('Classic Olive Panjabi', 899)">অর্ডার করুন</button>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<section id="products" class="section">
-  <div class="section-title">
-    <div><p class="eyebrow">OUR COLLECTION</p><h2>New Arrival</h2></div>
-    <input id="search" oninput="renderProducts()" placeholder="Search product...">
-  </div>
-  <div id="productGrid" class="grid"></div>
-</section>
-
-<section id="about" class="about">
-  <h2>Why NeXvora?</h2>
-  <div class="features">
-    <div>✨ <b>Premium Quality</b><small>Quality fabric & finishing</small></div>
-    <div>🚚 <b>Fast Delivery</b><small>Delivery across Bangladesh</small></div>
-    <div>🔒 <b>Trusted Shopping</b><small>Easy Cash on Delivery</small></div>
-  </div>
-</section>
-
-<div id="cartModal" class="modal">
-  <div class="modal-box">
-    <button class="close" onclick="closeCart()">×</button>
-    <h2>Your Cart</h2>
-    <div id="cartItems"></div>
-    <div class="total">Total: ৳<span id="cartTotal">0</span></div>
-    <button class="order-btn" onclick="checkout()">ORDER ON WHATSAPP</button>
-  </div>
-</div>
-
-<footer>
-  <div class="logo">Ne<span>X</span>vora</div>
-  <p>Premium Fashion • Trusted Quality</p>
-  <p>© 2026 NeXvora. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
